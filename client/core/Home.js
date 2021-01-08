@@ -36,7 +36,6 @@ export default function Home(){
   const classes = useStyles()
     return (
         <Card className={classes.card}>
-          <Link to="/users">Users</Link>
           <Typography variant="h6" className={classes.title}>
             Home Page
           </Typography>

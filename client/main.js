@@ -1,5 +1,9 @@
-import React from 'react'
-import { hydrate } from 'react-dom'
-import App from './App'
+import React from "react";
+import { hydrate, render } from "react-dom";
+import App from './App';
 
-hydrate(<App/>, document.getElementById('root'))
+const renderMethod = module.hot ? render : hydrate;
+renderMethod(
+  <App />,
+  document.getElementById('root')
+);

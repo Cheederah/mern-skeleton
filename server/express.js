@@ -12,6 +12,7 @@ import authRoutes from './routes/auth.routes'
 // modules for server side rendering
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
+import MainRouter from './../client/MainRouter'
 import { StaticRouter } from 'react-router-dom'
 
 import { ServerStyleSheets, ThemeProvider } from '@material-ui/styles'
@@ -50,6 +51,7 @@ app.get('*', (req, res) => {
     sheets.collect(
           <StaticRouter location={req.url} context={context}>
             <ThemeProvider theme={theme}>
+              <MainRouter />
             </ThemeProvider>
           </StaticRouter>
         )
